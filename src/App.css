@@ -1,3 +1,23 @@
+@media screen and (max-width: 1274px) {
+  #main-content {
+    left: 70px;
+    width: calc(100% - 70px)
+  }
+
+  #sidebar {
+    width: 70px;
+  }
+}
+@media screen and (min-width: 1275px) {
+  #main-content {
+    left: 300px;
+    width: calc(100% - 300px)
+  }
+
+  #sidebar {
+    width: 300px;
+  }
+}
 * {
   font-family: Roboto, "Helvetica Neue";
 }
@@ -12,8 +32,9 @@ body,
 #sidebar {
   border-right: 1px solid #ebeef0;
   display: inline-block;
-  width: 70px;
   text-align: center;
+  position: fixed;
+
 }
 
 #nav {
@@ -58,7 +79,10 @@ body,
 
 #main-content {
   display: inline-block;
+  position: absolute;
+  top: 0;
 }
+
 
 
 
