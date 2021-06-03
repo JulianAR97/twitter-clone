@@ -2,17 +2,21 @@
   font-family: Roboto, "Helvetica Neue"
 }
 
-#nav {
-  height: 100vh;
-  width: 20%;
+#sidebar {
   border-right: 1px solid #ebeef0;
+}
+#nav {
+  /* height: 100vh; */
+  display: inline-block;
   font-weight: bold;
   text-align: center;
 }
 
+/* ul */
 #nav-list {
   list-style-type: none;
   text-align: left;
+  padding-left: 0;
 }
 
 #nav-list li {
@@ -21,6 +25,7 @@
   display: inline-block;
   font-size: 20px;
   padding: 10px 30px 10px 20px;
+  margin-left: 0px;
 }
 
 #nav-list li:hover {
@@ -39,7 +44,14 @@
 }
 
 .tweet {
-  border-right: 1px solid #ebeef0;;
-  border-top: 1px solid #ebeef0;;
-  border-bottom: 1px solid #ebeef0;;
+  border-right: 1px solid #ebeef0;
+  border-top: 1px solid #ebeef0;
+  border-bottom: 1px solid #ebeef0;
+  /* display: inline-block; */
 }
+
+.fh {
+  height: 100%;
+}
+
+
