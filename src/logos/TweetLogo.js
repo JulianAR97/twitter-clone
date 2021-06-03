@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ProfileLogo = (props) => {
+const TweetLogo = (props) => {
   return (
     <svg 
-      height="15px" 
+      height="23px" 
       viewBox="0 0 24 24"
-      width="15px" 
+      width="23px" 
       xmlns="http://www.w3.org/2000/svg"
     >
       <g fill={props.fill}>
@@ -17,9 +17,9 @@ const ProfileLogo = (props) => {
 
 }
 
-ProfileLogo.defaultProps = {
-  fill: 'black'
+TweetLogo.defaultProps = {
+  fill: 'white'
 }
 
 
-export default ProfileLogo
+export default TweetLogo

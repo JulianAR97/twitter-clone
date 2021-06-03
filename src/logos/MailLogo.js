@@ -3,8 +3,8 @@ import React from 'react';
 const MailLogo = (props) => {
   return (
     <svg
-      height="15px"
-      width="15px"
+      height="26px"
+      width="26px"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >

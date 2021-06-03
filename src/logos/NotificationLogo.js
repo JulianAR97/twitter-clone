@@ -3,9 +3,9 @@ import React from 'react'
 const NotificationLogo = (props) => {
   return (
     <svg 
-      height="15px" 
+      height="26px" 
       viewBox="0 0 24 24"
-      width="15px" 
+      width="26px" 
       xmlns="http://www.w3.org/2000/svg"
     >
       <g fill={props.fill}>
