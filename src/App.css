@@ -36,5 +36,10 @@
   font-size: 15px;
   font-weight: 700;
   padding: 10px 50px;
-  
+}
+
+.tweet {
+  border-right: 1px solid #ebeef0;;
+  border-top: 1px solid #ebeef0;;
+  border-bottom: 1px solid #ebeef0;;
 }
