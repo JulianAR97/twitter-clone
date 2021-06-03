@@ -5,15 +5,16 @@ import {Container, Row, Col} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 const App = () => {
   return (
-    <div className="App">
-      <Container>
-        <Row>
-          <Col id="sidebar" xs="1" md="3">
+    <div className="app">
+      <Container className="fh">
+        <Row className="fh">
+          <Col id="sidebar" xs="1" xl="3">
             <Nav></Nav>
           </Col>
-          <Col id="main-content" xs="11" md="9">
+          <Col id="main-content" xs="11" xl="9">
             <Home></Home>
           </Col>
         </Row>
