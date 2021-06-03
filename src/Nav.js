@@ -1,56 +1,65 @@
 import navData from './data/navData'
 import React, {useState, useEffect} from 'react'
-// import HashtagLogo from './logos/HashtagLogo'
-// import HomeLogo from './logos/HomeLogo'
-// import NotificationLogo from './logos/NotificationLogo'
-// import MailLogo from './logos/MailLogo'
-// import BookmarksLogo from './logos/BookmarksLogo'
-// import ListLogo from './logos/ListLogo'
-// import ProfileLogo from './logos/ProfileLogo'
-// import MoreLogo from './logos/MoreLogo'
-// import TweetLogo from './logos/TweetLogo'
-// import TwitterLogo from './logos/TwitterLogo'
 import Icon from './Icon'
 
-const getWidth = () => window.innerWidth >= 1200 ? 'xl' : 'xs' 
+const getWidth = () => window.innerWidth
 
 
 const Nav = () => {
+  
   const renderIcons = (iconData) => {
+    const renderSpan = (name) => {
+      if (width >= 1275) {
+        console.log('here')
+        return <span>{name}</span>
+      }
+    }
     return iconData.map(d => {
       return (
         <>
-          <div className="nav-icon">
-            <Icon data={d} />
+          <div key={d.name} className="nav-icon">
+            <Icon data={d} />   
+            {renderSpan(d.name)}
           </div>
           <br/>
         </>
       )
     })
   }
+
+  const renderTweetButton = () => {
+    if (width < 1275) {
+      return <Icon data={navData.tweet} />
+    } else {
+      return <>Tweet</>
+    }
+  }
   
   let [width, setWidth] = useState(getWidth());
-
+  console.log(width)
+  
   useEffect(() => {
     let timeoutId = null;
     const resizeListener = () => {
       clearTimeout(timeoutId);
+      // add timeout to avoid changing state in effect error
       timeoutId = setTimeout(() => setWidth(getWidth()), 150 )
       
     }
-
     window.addEventListener('resize', resizeListener);
-
     return () => {
       window.removeEventListener('resize', resizeListener)
     }
   })
-  console.log(width)
+
+
   return (
     <div id="nav">
       {renderIcons(navData.navIcons)}
         
-      <div className="nav-icon" id="tweet-button"><Icon data={navData.tweet} /></div>
+      <div className="nav-icon" id="tweet-button">
+        {renderTweetButton()}
+      </div>
     </div>
   )
 }
