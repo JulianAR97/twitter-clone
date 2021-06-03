@@ -6,6 +6,12 @@ const Icon = (props) => {
     return props.data.paths.map(p => <path d={p} />)
   }
 
+  const renderCircles = () => {
+    return props.data.circles.map(c => {
+      return <circle cx={c.cx} cy={c.cy} r={c.r} />
+    })
+  }
+
   return (
     <svg 
       height={props.data.height}
@@ -14,6 +20,7 @@ const Icon = (props) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g fill={props.data.fill}>
+        {renderCircles()}
         {renderPaths()}
       </g>
     </svg>
