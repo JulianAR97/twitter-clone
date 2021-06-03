@@ -1,6 +1,8 @@
 import Tweet from '../Tweet'
 const Home = () => {
-  <Tweet></Tweet>
+  return (
+    'hello world'
+  )
 }
 
 export default Home

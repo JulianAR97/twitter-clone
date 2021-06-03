@@ -1,7 +1,7 @@
 const Tweet = (props) => {
   return (
     <div className="tweet">
-      
+      <p>{props.content}</p>
     </div>
   )
 }
